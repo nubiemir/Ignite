@@ -33,16 +33,12 @@ const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&p
 const upcoming_games = `games?dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
 const newGames = `games?dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
-export const popularGamesURL = () => `${base_url}${popular_games}`;
-export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
-export const newGamesURL = () => `${base_url}${newGames}`;
-
-export const popularGamesUrl = () => `${base_url}${popular_games}&key=${KEY}`;
-export const upcomingGamesUrl = () => `${base_url}${upcoming_games}&key=${KEY}`;
-export const newGamesUrl = () => `${base_url}${new_games}&key=${KEY}`;
-export const gameDetailsUrl = (gameId) =>
+export const popularGamesURL = () => `${base_url}${popular_games}&key=${KEY}`;
+export const upcomingGamesURL = () => `${base_url}${upcoming_games}&key=${KEY}`;
+export const newGamesURL = () => `${base_url}${newGames}&key=${KEY}`;
+export const gameDetailsURL = (gameId) =>
   `${base_url}games/${gameId}?key=${KEY}`;
-export const gameScreenshotsUrl = (gameId) =>
+export const gameScreenshotsURL = (gameId) =>
   `${base_url}games/${gameId}/screenshots?key=${KEY}`;
 export const searchGameURL = (game_name) =>
   `${base_url}games?search=${game_name}&page_size=9&key=${KEY}`;
